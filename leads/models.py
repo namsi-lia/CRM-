@@ -4,6 +4,8 @@ from django.contrib.auth.models import AbstractUser
 # Create your models here.
 ## this is a representation of your database schema
 
+## create a user with abstract user function which will be used by both new users and agents
+
 class User(AbstractUser):
     pass
 
@@ -18,3 +20,5 @@ class Leads(models.Model):
 class Agent (models.Model):
     user =models.OneToOneField(User,on_delete=models.CASCADE)
    
+    def __str__(self):
+        return self.user.email
