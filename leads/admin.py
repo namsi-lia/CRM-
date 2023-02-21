@@ -7,4 +7,6 @@ from .models import User, Leads, Agent
 ## register your database schema
 
 admin.site.register(User)
+admin.site.register(Leads)
+admin.site.register(Agent)
 
